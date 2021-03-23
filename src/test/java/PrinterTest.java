@@ -2,7 +2,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 
 public class PrinterTest {
 
@@ -35,7 +34,5 @@ public class PrinterTest {
         assertEquals(10, printer.getSheetsLeft());
         assertEquals(50, printer.getTonerVolume());
     }
-
-
 
 }

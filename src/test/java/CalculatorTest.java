@@ -4,29 +4,23 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class CalculatorTest {
-    Calculator calculator;
+    private Calculator calculator;
 
     @Before
     public void before() {
-        calculator = new Calculator(2, 4, 10.0, 5.0);
+        calculator = new Calculator();
     }
 
     @Test
-    public void hasNum1() {assertEquals(2, calculator.getNum1());}
+    public void testAdd() {assertEquals(6, calculator.add(2, 4));}
 
     @Test
-    public void hasNum2() {assertEquals(4, calculator.getNum2());}
+    public void testSubtract() {assertEquals(-2, calculator.subtract(2, 4));}
 
     @Test
-    public void testAdd() {assertEquals(6, calculator.addNums());}
+    public void testMultiply() {assertEquals(8, calculator.multiply(2, 4));}
 
     @Test
-    public void testSubtract() {assertEquals(-2, calculator.subtractNums());}
+    public void testDivide() {assertEquals(2.0, calculator.divide(4.0, 2.0), 0.0);}
 
-    @Test
-    public void testMultiply() {assertEquals(8, calculator.multiplyNums());}
-
-    @Test
-    public void testDivide() {assertEquals(2.0, calculator.divideNums(), 0.0);}
 }
-
